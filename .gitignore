@@ -16,3 +16,4 @@ README_dataset.md
 README_model.md
 nccl_debug.log
 checkpoints/
+data/datasets/
