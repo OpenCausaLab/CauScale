@@ -7,8 +7,6 @@ sample_size=1000
 
 exp_name="synthetic-stage1_samp${sample_size}_bs${batch_size}_gpun${NUM_GPU}"
 results_prefix="output/synthetic/${exp_name}"
-export NCCL_DEBUG=INFO
-export NCCL_DEBUG_FILE=/mnt/shared-storage-user/pengbo/created/projects/CausalDiscovery/CauScale/nccl_debug.log
 python src/train.py \
     --config_file config/train.yaml \
     --gpu $CUDA \

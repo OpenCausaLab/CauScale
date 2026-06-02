@@ -7,7 +7,7 @@ sample_size=5000
 
 exp_name="sergio_samp${sample_size}_bs${batch_size}_gpun${NUM_GPU}"
 results_prefix="output/sergio/${exp_name}"
-export NCCL_DEBUG=INFO
+
 python src/train.py \
     --config_file config/train.yaml \
     --gpu $CUDA \
