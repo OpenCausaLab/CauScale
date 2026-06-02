@@ -1,7 +1,7 @@
 ---
  data:
      feature_sample_size: 500
-     num_workers: 10
+     num_workers: 2
      accumulate_batches: 1
      log_frequency: 10
      normalize_data: True

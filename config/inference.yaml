@@ -1,7 +1,7 @@
 ---
  data:
      feature_sample_size: 500
-     num_workers: 10
+     num_workers: 2
      normalize_data: True
  inference:
      status: inference
