@@ -1,0 +1,21 @@
+---
+ data:
+     feature_sample_size: 500
+     num_workers: 10
+     accumulate_batches: 1
+     log_frequency: 10
+     normalize_data: True
+ train:
+     patience: 50
+     epochs: 10000
+     min_epochs: 50
+     lr: 1.e-4
+     weight_decay: 1.e-5
+     metric: "Val/auprc"
+     transformer_num_layers: 10
+     embed_dim: 128
+     n_heads: 16
+     scale_data_cols: True
+     use_self_defined_mask: True
+     load_data_while_use: True
+     save_path: output_model/train

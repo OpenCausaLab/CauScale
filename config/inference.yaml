@@ -1,0 +1,13 @@
+---
+ data:
+     feature_sample_size: 500
+     num_workers: 10
+     normalize_data: True
+ inference:
+     status: inference
+     seed: 42
+     transformer_num_layers: 10
+     embed_dim: 128
+     n_heads: 16
+     scale_data_cols: True
+     use_self_defined_mask: True

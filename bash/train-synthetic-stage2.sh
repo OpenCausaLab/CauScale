@@ -1,0 +1,23 @@
+CUDA=0
+NUM_GPU=8
+data_file="data/data_csv/train-synthetic-stage-2.csv"  # TODO: generate data
+inference_data_file="data/data_csv/inference_synthetic.csv"  # TODO: download data
+checkpoint_path=""  # TODO: set path to stage 1 checkpoint
+batch_size=8
+sample_size=1000
+
+exp_name="synthetic-stage2_samp${sample_size}_bs${batch_size}_gpun${NUM_GPU}"
+results_prefix="output/synthetic/${exp_name}"
+
+python src/train.py \
+    --config_file config/train.yaml \
+    --gpu $CUDA \
+    --num_gpu $NUM_GPU \
+    --data_file "$data_file" \
+    --inference_data_file "$inference_data_file" \
+    --results_prefix "$results_prefix" \
+    --output_name "$exp_name" \
+    --batch_size $batch_size \
+    --sample_size $sample_size \
+    --limit_train_batches 200 \
+    --checkpoint_path "$checkpoint_path"
